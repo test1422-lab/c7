@@ -1,0 +1,6 @@
+container:
+  image: ubuntu:18.04
+
+test_task:
+  timeout_in: 110m
+  test_script: apt update -qq && apt install -y python python2.7 python-pip wget curl libpng16-16 libbz2-1.0 zlib1g -qq &&python2 -m pip install --upgrade pip &&pip install  pyyaml requests  tqdm colorama six requests_toolbelt&&python2 test meta_all
